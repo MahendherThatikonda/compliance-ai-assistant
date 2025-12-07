@@ -1,0 +1,41 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+.envrc
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+.ipython/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Logs and coverage
+*.log
+*.out
+*.err
+.coverage
+coverage.xml
+htmlcov/
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+
+# Data / artifacts
+data/
+
