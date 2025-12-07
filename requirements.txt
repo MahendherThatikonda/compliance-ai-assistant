@@ -1,0 +1,9 @@
+ipykernel
+openai
+pinecone==8.0.0
+pypdf
+python-dotenv
+tqdm
+cryptography
+chromadb
+

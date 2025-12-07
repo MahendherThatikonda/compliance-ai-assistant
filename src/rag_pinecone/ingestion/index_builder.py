@@ -13,7 +13,7 @@ logger = get_logger(__name__)
 
 PINECONE_API_KEY='pcsk_2pD8bn_EPmnhaD75GbJ2pKu9E6GLybFUAeFQW4trzkjXFCzVNtajktwtGXFsdyGEzE5Sdu'
 
-PINECONE_INDEX_NAME='foleys-rag-index'
+PINECONE_INDEX_NAME='foleys3-rag-index'
 
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
 pc = Pinecone(api_key=PINECONE_API_KEY)
