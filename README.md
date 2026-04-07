@@ -1,6 +1,6 @@
 # Compliance AI Assistant — Foley's NZ
 
-A production-grade RAG (Retrieval-Augmented Generation) application that helps 
+A RAG (Retrieval-Augmented Generation) application that helps 
 plumbers, electricians, and gas-fitters instantly find compliance answers from 
 official AS/NZS standards and New Zealand Building Code (NZBC) regulations.
 
