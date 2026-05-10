@@ -56,4 +56,4 @@ compliance-ai-assistant/
 3. **Retrieval** — Version-aware metadata filtering fetches the most relevant 
    chunks from the correct document version
 4. **Generation** — LLM generates a structured answer strictly from retrieved 
-   chunks, separating AS/NZS requirements from NZBC references
+   chunks, separating AS/NZS requirements
