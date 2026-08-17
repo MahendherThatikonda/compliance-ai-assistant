@@ -1,0 +1,212 @@
+/* src/app/welcome/welcome.css */
+
+.welcome-container {
+  max-width: 900px;
+  width: 100%;
+
+  margin: auto;
+
+  text-align: center;
+
+  padding:
+    100px
+    30px
+    270px;
+}
+
+
+.main-logo {
+  width: 180px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  margin-bottom: 20px;
+}
+
+
+.welcome-container h1 {
+  margin: 0 0 20px;
+
+  font-size: 35px;
+
+  font-weight: 650;
+
+  letter-spacing: -0.8px;
+
+  color: #19231f;
+}
+
+
+.description {
+  margin: 4px 0;
+
+  color: #616b67;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* ===============================
+   EXAMPLE QUESTIONS
+================================ */
+
+.example-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin-top: 42px;
+}
+
+
+.example-card {
+  min-height: 82px;
+
+  border: 1px solid #e1e5e3;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  background: white;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  line-height: 1.45;
+
+  color: #26312d;
+
+  cursor: pointer;
+
+  transition:
+    all
+    0.2s
+    ease;
+}
+
+
+.example-card:hover {
+  border-color: #9fb8aa;
+
+  background: #f8fbf9;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 20px
+    rgba(0, 0, 0, 0.04);
+}
+
+
+.example-icon {
+  flex-shrink: 0;
+
+  font-size: 24px;
+
+  color: #075b3c;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 950px) {
+
+  .example-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .welcome-container {
+    padding:
+      80px
+      20px
+      250px;
+  }
+
+
+  .welcome-container h1 {
+    font-size: 27px;
+  }
+
+  .welcome-container h1 {
+  font-size: 36px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.welcome-container p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Question cards */
+.example-card {
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+}
+
+.welcome-container h1 {
+  font-size: 36px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.welcome-container p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Question cards */
+.example-card {
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+/* ===== STRONGER WELCOME TEXT ===== */
+
+.welcome-container h1 {
+  font-size: 38px !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.5px;
+}
+
+.welcome-container p {
+  font-size: 18px !important;
+  font-weight: 550 !important;
+  line-height: 1.6 !important;
+}
+
+.example-card {
+  font-size: 16px !important;
+  font-weight: 650 !important;
+  line-height: 1.45 !important;
+}

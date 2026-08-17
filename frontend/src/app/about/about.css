@@ -1,0 +1,327 @@
+.content-page {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding:
+    110px
+    35px
+    60px;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.page-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 35px;
+}
+
+
+.page-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: #edf5f0;
+
+  color: #07563a;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+}
+
+
+.page-header h1 {
+  margin:
+    0
+    0
+    8px;
+
+  font-size: 32px;
+
+  color: #17201d;
+}
+
+
+.page-header p {
+  margin: 0;
+
+  color: #69736f;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* ===============================
+   CARDS
+================================ */
+
+.info-card {
+  border: 1px solid #e0e5e2;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  padding: 25px;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 2px 10px
+    rgba(0, 0, 0, 0.025);
+}
+
+
+.info-card h2 {
+  margin:
+    0
+    0
+    14px;
+
+  font-size: 20px;
+
+  color: #173d2e;
+}
+
+
+.info-card > p {
+  margin:
+    8px
+    0;
+
+  color: #4f5a55;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* ===============================
+   PROCESS
+================================ */
+
+.process-flow {
+  margin-top: 20px;
+}
+
+
+.process-step {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding:
+    15px
+    16px;
+
+  border: 1px solid #e2e6e4;
+
+  border-radius: 10px;
+
+  background: #fafcfb;
+}
+
+
+.step-number {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #e4f0e8;
+
+  color: #07563a;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.step-content {
+  flex: 1;
+}
+
+
+.step-content strong {
+  color: #273d33;
+
+  font-size: 15px;
+}
+
+
+.step-content p {
+  margin:
+    5px
+    0
+    0;
+
+  color: #65706b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+.process-arrow {
+  margin:
+    7px
+    0
+    7px
+    15px;
+
+  color: #93a099;
+
+  font-size: 18px;
+}
+
+
+/* ===============================
+   TECHNOLOGY
+================================ */
+
+.technology-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+
+.technology-item {
+  border: 1px solid #e4e8e6;
+
+  border-radius: 10px;
+
+  background: #fafcfb;
+
+  padding: 16px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.technology-item strong {
+  color: #143e2e;
+
+  font-size: 15px;
+}
+
+
+.technology-item span {
+  color: #6c7671;
+
+  font-size: 13px;
+}
+
+
+/* ===============================
+   DISCLAIMER
+================================ */
+
+.warning-card {
+  border: 1px solid #dfdfcf;
+
+  border-radius: 14px;
+
+  background: #fffdf4;
+
+  padding:
+    22px
+    24px;
+
+  margin-top: 20px;
+}
+
+
+.warning-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #614f1b;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+.warning-card p {
+  margin:
+    9px
+    0
+    0;
+
+  color: #665f49;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+
+  .content-page {
+    padding:
+      75px
+      20px
+      40px;
+  }
+
+
+  .page-header h1 {
+    font-size: 27px;
+  }
+
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

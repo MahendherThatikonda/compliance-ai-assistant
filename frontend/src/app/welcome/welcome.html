@@ -1,0 +1,47 @@
+<!-- src/app/welcome/welcome.html -->
+
+<section class="welcome-container">
+
+  <img
+    src="foleys-logo.png"
+    alt="Foleys"
+    class="main-logo"
+  />
+
+  <h1>
+    Foleys AI Compliance Assistant
+  </h1>
+
+  <p class="description">
+    Ask questions about plumbing standards and compliance requirements.
+  </p>
+
+  <p class="description">
+    Get guidance based on relevant standards and supporting references.
+  </p>
+
+
+  <div
+    class="example-grid"
+    *ngIf="examples.length > 0"
+  >
+
+    <button
+      class="example-card"
+      *ngFor="let example of examples | slice:0:3"
+      (click)="selectExample(example)"
+    >
+
+      <div class="example-icon">
+        ◇
+      </div>
+
+      <span>
+        {{ example }}
+      </span>
+
+    </button>
+
+  </div>
+
+</section>

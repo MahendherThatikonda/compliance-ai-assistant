@@ -1,0 +1,151 @@
+<aside class="sidebar">
+
+  <div class="sidebar-top">
+
+    <div class="logo-section">
+
+      <img
+        src="foleys-logo.png"
+        alt="Foleys"
+        class="sidebar-logo"
+      />
+
+      <button
+        class="collapse-button"
+        title="Collapse sidebar"
+      >
+        ☰
+      </button>
+
+    </div>
+
+
+    <button
+      class="new-chat-button"
+      (click)="newChat()"
+    >
+      <span class="plus">
+        +
+      </span>
+
+      New Chat
+    </button>
+
+
+    <nav class="navigation">
+
+      <button
+        class="nav-item"
+        [class.active]="currentPage === 'home'"
+        (click)="navigate('home')"
+      >
+        <span class="nav-icon">
+          ⌂
+        </span>
+
+        Home
+      </button>
+
+
+      <button
+        class="nav-item"
+        [class.active]="currentPage === 'standards'"
+        (click)="navigate('standards')"
+      >
+        <span class="nav-icon">
+          ◇
+        </span>
+
+        Standards
+      </button>
+
+
+      <button
+        class="nav-item"
+        [class.active]="currentPage === 'about'"
+        (click)="navigate('about')"
+      >
+        <span class="nav-icon">
+          ⓘ
+        </span>
+
+        About
+      </button>
+
+    </nav>
+
+
+    <div class="separator"></div>
+
+
+    <div class="recent-section">
+
+      <h3>
+        Example Questions
+      </h3>
+
+      <button
+        class="recent-chat"
+        *ngFor="let example of examples"
+        (click)="selectExample(example)"
+      >
+
+        <span class="example-dot">
+          ○
+        </span>
+
+        <span class="recent-title">
+          {{ example }}
+        </span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+<div class="sidebar-bottom">
+
+<app-suggestion />
+
+  <div class="disclaimer-card">
+
+    <div class="disclaimer-title">
+
+      <span>
+        ◇
+      </span>
+
+      Disclaimer
+
+    </div>
+
+    <p>
+      AI-generated guidance only.
+      Verify critical requirements
+      against the original standard.
+    </p>
+
+  </div>
+
+
+  <!-- <div class="profile">
+
+    <div class="avatar">
+      M
+    </div>
+
+    <div class="profile-name">
+      Mahendher
+    </div>
+
+    <span class="profile-arrow">
+      ⌄
+    </span>
+
+  </div> -->
+
+</div>
+
+</aside>

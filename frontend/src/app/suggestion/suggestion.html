@@ -1,0 +1,113 @@
+<div class="suggestion-wrapper">
+
+  <button
+    class="feedback-button"
+    (click)="openSuggestion()"
+    *ngIf="!isOpen"
+  >
+    <span class="feedback-icon">
+      💬
+    </span>
+
+    <span>
+      Send Feedback
+    </span>
+  </button>
+
+
+  <div
+    class="suggestion-card"
+    *ngIf="isOpen"
+  >
+
+    <div class="suggestion-header">
+
+      <div>
+
+        <h3>
+          Help us improve
+        </h3>
+
+        <p>
+          Share a suggestion or feedback about the assistant.
+        </p>
+
+      </div>
+
+
+      <button
+        class="close-button"
+        (click)="closeSuggestion()"
+        title="Close"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <textarea
+      [(ngModel)]="suggestion"
+      placeholder="Write your suggestion..."
+      rows="4"
+      maxlength="1000"
+    ></textarea>
+
+
+    <div class="character-count">
+
+      {{ suggestion.length }}/1000
+
+    </div>
+
+
+    <div
+      class="success-message"
+      *ngIf="successMessage"
+    >
+      ✓ {{ successMessage }}
+    </div>
+
+
+    <div
+      class="error-message"
+      *ngIf="errorMessage"
+    >
+      {{ errorMessage }}
+    </div>
+
+
+    <div class="suggestion-actions">
+
+      <button
+        class="cancel-button"
+        (click)="closeSuggestion()"
+      >
+        Cancel
+      </button>
+
+
+      <button
+        class="submit-button"
+        (click)="submitSuggestion()"
+        [disabled]="
+          sending ||
+          !suggestion.trim()
+        "
+      >
+
+        <span *ngIf="!sending">
+          Send Suggestion
+        </span>
+
+        <span *ngIf="sending">
+          Sending...
+        </span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

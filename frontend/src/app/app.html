@@ -1,0 +1,59 @@
+<div class="app-layout">
+
+<app-sidebar
+  [currentPage]="currentPage"
+  [examples]="examples"
+  (navigatePage)="navigate($event)"
+  (newChatRequested)="newChat()"
+  (exampleSelected)="useExample($event)"
+/>
+
+  <main class="main-area">
+
+    <div class="top-status">
+      <span>◇</span>
+      <span><title>Compliance Assistant</title></span>
+      <span class="online-dot"></span>
+    </div>
+
+
+    <!-- HOME -->
+    <ng-container *ngIf="currentPage === 'home'">
+
+      <app-welcome
+  *ngIf="messages.length === 0"
+  [examples]="examples"
+  (exampleSelected)="useExample($event)"
+/>
+
+
+<app-chat
+  *ngIf="messages.length > 0"
+  [messages]="messages"
+  [loading]="loading"
+  (copyRequested)="copyAnswer($event)"
+/>
+
+
+      <app-composer
+  [question]="question"
+  [loading]="loading"
+  (questionChange)="question = $event"
+  (sendRequested)="askQuestion()"
+/>
+
+    </ng-container>
+
+
+    <!-- STANDARDS PAGE -->
+    <app-standards
+  *ngIf="currentPage === 'standards'"
+/>
+
+<app-about
+  *ngIf="currentPage === 'about'"
+/>
+
+  </main>
+
+</div>

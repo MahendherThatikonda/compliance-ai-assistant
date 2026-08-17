@@ -1,0 +1,259 @@
+.composer-section {
+  position: fixed;
+
+  left: 300px;
+  bottom: 0;
+
+  width: calc(100% - 300px);
+
+  padding:
+    35px
+    30px
+    17px;
+
+  background:
+    linear-gradient(
+      to top,
+      white 78%,
+      rgba(255, 255, 255, 0)
+    );
+
+  z-index: 10;
+}
+
+
+.composer {
+  max-width: 960px;
+
+  margin: auto;
+
+  background: white;
+
+  border: 1px solid #d9dfdc;
+
+  border-radius: 15px;
+
+  padding:
+    14px
+    17px;
+
+  box-shadow:
+    0 4px 20px
+    rgba(0, 0, 0, 0.06);
+}
+
+
+.composer textarea {
+  width: 100%;
+
+  resize: none;
+
+  border: none;
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  color: #27312d;
+
+  background: transparent;
+
+  min-height: 55px;
+}
+
+
+.composer textarea::placeholder {
+  color: #909995;
+}
+
+
+.composer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 8px;
+}
+
+
+.composer-left,
+.composer-right {
+  display: flex;
+
+  gap: 8px;
+
+  align-items: center;
+}
+
+
+.icon-button,
+.settings-button {
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  padding: 8px;
+
+  border-radius: 8px;
+}
+
+
+.icon-button:hover,
+.settings-button:hover {
+  background: #f1f4f2;
+}
+
+
+.source-button {
+  border: 1px solid #dfe4e1;
+
+  border-radius: 9px;
+
+  background: white;
+
+  padding:
+    8px
+    14px;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  color: #44504a;
+}
+
+
+.source-button:hover {
+  background: #f6f9f7;
+
+  border-color: #bfcac4;
+}
+
+
+.send-button {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #07563a;
+
+  color: white;
+
+  font-size: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.send-button:hover {
+  background: #06442f;
+
+  transform: translateY(-1px);
+}
+
+
+.send-button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+.privacy-message {
+  margin:
+    13px
+    auto
+    0;
+
+  text-align: center;
+
+  color: #7a837f;
+
+  font-size: 11px;
+}
+
+
+@media (max-width: 950px) {
+
+  .composer-section {
+    left: 230px;
+
+    width: calc(100% - 230px);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .composer-section {
+    left: 0;
+
+    width: 100%;
+
+    padding:
+      30px
+      15px
+      12px;
+  }
+
+}
+
+.composer-container textarea {
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 1.5;
+}
+
+.composer-container textarea::placeholder {
+  font-size: 16px;
+  font-weight: 450;
+}
+
+.sources-button {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===== STRONGER COMPOSER TEXT ===== */
+
+.composer-container textarea {
+  font-size: 17px !important;
+  font-weight: 500 !important;
+}
+
+.composer-container textarea::placeholder {
+  font-size: 17px !important;
+  font-weight: 500 !important;
+}
+
+.sources-button {
+  font-size: 15px !important;
+  font-weight: 650 !important;
+}
+
+.composer textarea {
+  font-size: 18px !important;
+  font-weight: 500;
+  color: #17201d;
+  line-height: 1.5;
+}

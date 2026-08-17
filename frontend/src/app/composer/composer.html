@@ -1,0 +1,47 @@
+<section class="composer-section">
+
+  <div class="composer">
+
+    <textarea
+      [ngModel]="question"
+      (ngModelChange)="onQuestionChange($event)"
+      (keydown.enter)="handleEnter($event)"
+      placeholder="Ask a plumbing compliance question..."
+      rows="2"
+    ></textarea>
+
+
+    <div class="composer-bottom">
+
+      <div class="composer-left">
+
+      </div>
+
+
+      <div class="composer-right">
+
+        <button
+          class="send-button"
+          (click)="send()"
+          [disabled]="loading || !question.trim()"
+          title="Send"
+        >
+          ➤
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="privacy-message">
+
+    🔒 Your questions are processed securely.
+    Verify critical compliance information
+    against the original standards.
+
+  </div>
+
+</section>

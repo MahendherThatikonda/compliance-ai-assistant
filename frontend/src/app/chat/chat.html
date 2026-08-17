@@ -1,0 +1,184 @@
+<section class="conversation">
+
+  <div
+    *ngFor="let message of messages"
+    class="message-wrapper"
+    [class.user-wrapper]="message.role === 'user'"
+    [class.assistant-wrapper]="message.role === 'assistant'"
+  >
+
+
+    <!-- AI AVATAR -->
+
+    <div
+      class="assistant-avatar"
+      *ngIf="message.role === 'assistant'"
+    >
+      F
+    </div>
+
+
+    <!-- MESSAGE -->
+
+    <div
+      class="message"
+      [class.user-message]="message.role === 'user'"
+      [class.assistant-message]="message.role === 'assistant'"
+    >
+
+
+      <div class="message-content">
+        {{ message.content }}
+      </div>
+
+
+      <div class="message-time">
+        {{ message.time }}
+      </div>
+
+      <div
+        class="answer-actions"
+        *ngIf="message.role === 'assistant'"
+      >
+
+
+        <!-- SOURCES -->
+
+<button
+  *ngIf="hasEnoughInformation(message)"
+  class="action-button"
+  (click)="toggleSources(message)">
+  ▱ Sources
+</button>
+
+
+        <!-- LIKE -->
+
+        <button
+          class="action-button icon-only"
+          [class.liked]="message.liked"
+          (click)="toggleLike(message)"
+          [title]="message.liked ? 'Unlike answer' : 'Like answer'"
+        >
+
+          <span *ngIf="!message.liked">
+            ♡
+          </span>
+
+          <span *ngIf="message.liked">
+            ♥
+          </span>
+
+        </button>
+
+        <button
+          class="action-button icon-only"
+          (click)="copyAnswer(message.content)"
+          title="Copy answer"
+        >
+          ⧉
+        </button>
+
+      </div>
+
+      <div
+        class="sources-panel"
+        *ngIf="
+          message.role === 'assistant'
+          && message.showSources
+        "
+      >
+
+        <div class="sources-header">
+
+          <strong>
+            Sources
+          </strong>
+
+          <button
+            class="close-sources"
+            (click)="toggleSources(message)"
+          >
+            ×
+          </button>
+
+        </div>
+
+
+        <ng-container
+          *ngIf="
+            message.sources
+            && message.sources.length > 0;
+            else noSources
+          "
+        >
+
+          <div
+            class="source-item"
+            *ngFor="let source of message.sources; let i = index"
+          >
+
+            <div class="source-number">
+              {{ i + 1 }}
+            </div>
+
+            <div class="source-text">
+              {{ source }}
+            </div>
+
+          </div>
+
+        </ng-container>
+
+
+        <ng-template #noSources>
+
+          <div class="no-sources">
+
+            Source details are not currently
+            returned separately by the API.
+
+          </div>
+
+        </ng-template>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div
+    class="message-wrapper assistant-wrapper"
+    *ngIf="loading"
+  >
+
+    <div class="assistant-avatar">
+      F
+    </div>
+
+
+    <div class="message assistant-message">
+
+      <div class="loading-row">
+
+        <div class="loading-dots">
+
+          <span class="loading-dot"></span>
+          <span class="loading-dot"></span>
+          <span class="loading-dot"></span>
+
+        </div>
+
+        <span>
+          Searching compliance standards...
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
