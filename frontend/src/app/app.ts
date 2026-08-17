@@ -84,7 +84,7 @@ export class App {
     this.loading = true;
 
     this.http.post<any>(
-      'http://127.0.0.1:8000/ask',
+      'https://compliance-ai-assistant.onrender.com/ask',
       {
         question: text
       }

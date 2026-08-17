@@ -84,7 +84,7 @@ export class Suggestion {
 
 
     this.http.post(
-      'http://127.0.0.1:8000/suggestion',
+      'https://compliance-ai-assistant.onrender.com/suggestion',
       {
         suggestion: text
       }
